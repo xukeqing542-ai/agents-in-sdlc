@@ -1,0 +1,28 @@
+{
+  "method": "scripted persona walkthrough using local HTTP requests, not user interviews",
+  "personas": [
+    {
+      "persona": "财务复核员（虚拟）",
+      "task": "运行样本并定位异常与制度依据",
+      "passed": true
+    },
+    {
+      "persona": "新入职操作员（虚拟）",
+      "task": "上传缺表头文件并定位待补字段",
+      "passed": true
+    },
+    {
+      "persona": "付款审批人（虚拟）",
+      "task": "查询条款并验证无依据回退和审批限制",
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "total": 3,
+  "implementation_updates": [
+    "Missing required CSV field names are now shown on the page",
+    "A citation displays the matching policy excerpt",
+    "Full current run output can be downloaded as JSON"
+  ],
+  "limitations": "Virtual personas and automated assertions cannot establish usability for real users."
+}

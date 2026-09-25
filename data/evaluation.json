@@ -1,0 +1,55 @@
+{
+  "metrics": {
+    "dataset": "240 synthetic payments / 76 rule-seeded positives",
+    "true_positives": 76,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "retrieval_pass": 5,
+    "retrieval_total": 5,
+    "manual_review_gate": true,
+    "tool_order": [
+      "validate_schema",
+      "index_invoices",
+      "detect_exceptions",
+      "retrieve_policy",
+      "human_review_gate",
+      "export_report"
+    ],
+    "limitations": "合成样本由相同规则构造，指标只证明演示流程运行；制度为演示文本，未接入LLM或企业系统。",
+    "edge_cases": "7条独立边界输入，6条应提示，6条提示；10000元边界保持正常"
+  },
+  "retrieval_cases": [
+    {
+      "query": "订单编号缺失 单据完整性",
+      "expected": "P-01",
+      "actual": "data/demo_policy.json#P-01",
+      "pass": true
+    },
+    {
+      "query": "重复发票号 票据重复",
+      "expected": "P-02",
+      "actual": "data/demo_policy.json#P-02",
+      "pass": true
+    },
+    {
+      "query": "付款金额超过10000 金额阈值",
+      "expected": "P-03",
+      "actual": "data/demo_policy.json#P-03",
+      "pass": true
+    },
+    {
+      "query": "谁能批准付款 人工审批",
+      "expected": "P-04",
+      "actual": "data/demo_policy.json#P-04",
+      "pass": true
+    },
+    {
+      "query": "火星轨道电梯宇宙辐射",
+      "expected": "none",
+      "actual": "none",
+      "pass": true
+    }
+  ]
+}

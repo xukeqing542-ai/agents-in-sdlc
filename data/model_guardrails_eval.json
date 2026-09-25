@@ -1,0 +1,79 @@
+{
+  "method": "hand-authored output-validation cases; no model call",
+  "total": 12,
+  "passed": 12,
+  "cases": [
+    {
+      "case": "合法引用及人工复核",
+      "expected": "model_draft_pending_human_review",
+      "actual": "model_draft_pending_human_review",
+      "pass": true
+    },
+    {
+      "case": "引用其他条款",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "伪造来源编号",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "自动批准动作",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "自动批准话术",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "确定违规话术",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "空解释",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "非JSON回复",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "JSON缺少动作",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "JSON缺少来源",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "解释字段错误类型",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    },
+    {
+      "case": "错误动作需回退",
+      "expected": "fallback",
+      "actual": "fallback",
+      "pass": true
+    }
+  ]
+}

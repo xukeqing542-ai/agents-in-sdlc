@@ -1,0 +1,81 @@
+{
+  "method": "interactive assistant-authored responses archived with prompts; no API request IDs",
+  "scope": "three controlled test records from holdout_20.csv",
+  "checked": 3,
+  "passed": 3,
+  "limitation": "This is not an independent or blinded model API benchmark.",
+  "records": [
+    {
+      "payment_id": "H02",
+      "input": {
+        "payment_id": "H02",
+        "flags": [
+          "over_limit"
+        ],
+        "amount": "10000.01",
+        "evidence": {
+          "status": "found",
+          "title": "金额阈值（演示制度）",
+          "excerpt": "本演示单笔付款金额超过10000元时应提示金额超限并转人工审核；此阈值仅用于合成数据演示。",
+          "citation": "data/demo_policy.json#P-03",
+          "score": 0.87
+        },
+        "review_status": "pending_human_review"
+      },
+      "prompt": "你是财务复核辅助工具。只依据下方演示条款解释已由规则发现的异常；不能批准付款、认定违规或补充条款中没有的规定。仅输出JSON：{\"reason\":\"一句话原因\",\"citation\":\"原样来源编号\",\"action\":\"人工复核\"}。\n付款编号：H02\n异常标签：['over_limit']\n金额：10000.01\n演示条款：本演示单笔付款金额超过10000元时应提示金额超限并转人工审核；此阈值仅用于合成数据演示。\n来源编号：data/demo_policy.json#P-03",
+      "raw_response": "{\"reason\": \"H02 的付款金额超过演示阈值 10000 元，应核对原始单据后交人工复核。\", \"citation\": \"data/demo_policy.json#P-03\", \"action\": \"人工复核\"}",
+      "response_sha256": "5673598f3bc2850d18695952345b099642084f6c8cd96252044d0c9e15de3c87",
+      "prompt_sha256": "f7f69d490d925fff69f76a585857994dab83f0043dd38135f9f03dba3136cac1",
+      "format_and_citation_check": true,
+      "review_status": "人工复核"
+    },
+    {
+      "payment_id": "H03",
+      "input": {
+        "payment_id": "H03",
+        "flags": [
+          "missing_order"
+        ],
+        "amount": "25",
+        "evidence": {
+          "status": "found",
+          "title": "单据完整性（演示制度）",
+          "excerpt": "费用付款记录必须包含付款编号、订单编号、发票号及付款金额；订单编号缺失时提交人工复核。",
+          "citation": "data/demo_policy.json#P-01",
+          "score": 0.842
+        },
+        "review_status": "pending_human_review"
+      },
+      "prompt": "你是财务复核辅助工具。只依据下方演示条款解释已由规则发现的异常；不能批准付款、认定违规或补充条款中没有的规定。仅输出JSON：{\"reason\":\"一句话原因\",\"citation\":\"原样来源编号\",\"action\":\"人工复核\"}。\n付款编号：H03\n异常标签：['missing_order']\n金额：25\n演示条款：费用付款记录必须包含付款编号、订单编号、发票号及付款金额；订单编号缺失时提交人工复核。\n来源编号：data/demo_policy.json#P-01",
+      "raw_response": "{\"reason\": \"H03 缺少订单编号，演示条款要求补齐订单信息并提交人工复核。\", \"citation\": \"data/demo_policy.json#P-01\", \"action\": \"人工复核\"}",
+      "response_sha256": "72c7f56894cb87b31d08396c9cc980fe55a85241fb4b4dc979a16b8c57508313",
+      "prompt_sha256": "ae7361496fd7dce19552fe6a5fd81cf86503eacf7c841e3d17f6bc19ebea8a8a",
+      "format_and_citation_check": true,
+      "review_status": "人工复核"
+    },
+    {
+      "payment_id": "H06",
+      "input": {
+        "payment_id": "H06",
+        "flags": [
+          "duplicate_invoice"
+        ],
+        "amount": "800",
+        "evidence": {
+          "status": "found",
+          "title": "重复票据（演示制度）",
+          "excerpt": "同一发票号出现多次付款记录，应标记重复票据风险，并由人工核对，不得自动认定违规。",
+          "citation": "data/demo_policy.json#P-02",
+          "score": 0.357
+        },
+        "review_status": "pending_human_review"
+      },
+      "prompt": "你是财务复核辅助工具。只依据下方演示条款解释已由规则发现的异常；不能批准付款、认定违规或补充条款中没有的规定。仅输出JSON：{\"reason\":\"一句话原因\",\"citation\":\"原样来源编号\",\"action\":\"人工复核\"}。\n付款编号：H06\n异常标签：['duplicate_invoice']\n金额：800\n演示条款：同一发票号出现多次付款记录，应标记重复票据风险，并由人工核对，不得自动认定违规。\n来源编号：data/demo_policy.json#P-02",
+      "raw_response": "{\"reason\": \"H06 的发票号与先前付款记录重复，需人工核对票据及付款背景。\", \"citation\": \"data/demo_policy.json#P-02\", \"action\": \"人工复核\"}",
+      "response_sha256": "2028574e9b47add4579d059bafdb7f9dc1cd49b956fc8b5c6491cea683b057d5",
+      "prompt_sha256": "897e578f9178bfa108804283470854c8494ee952e4a64b89390b9494389107d4",
+      "format_and_citation_check": true,
+      "review_status": "人工复核"
+    }
+  ]
+}

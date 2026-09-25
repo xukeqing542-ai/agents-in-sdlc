@@ -1,0 +1,193 @@
+{
+  "source": "20 hand-authored synthetic cases, separate from generator; not a blind real-world sample",
+  "case_count": 20,
+  "exact_flag_match_count": 20,
+  "all_pending_human_review": true,
+  "limitations": [
+    "Cases were authored after viewing the prototype rules",
+    "No model output is evaluated",
+    "No enterprise or customer data"
+  ],
+  "details": [
+    {
+      "payment_id": "H01",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H02",
+      "expected": [
+        "over_limit"
+      ],
+      "observed": [
+        "over_limit"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H03",
+      "expected": [
+        "missing_order"
+      ],
+      "observed": [
+        "missing_order"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H04",
+      "expected": [
+        "missing_invoice"
+      ],
+      "observed": [
+        "missing_invoice"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H05",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H06",
+      "expected": [
+        "duplicate_invoice"
+      ],
+      "observed": [
+        "duplicate_invoice"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H07",
+      "expected": [
+        "invalid_amount"
+      ],
+      "observed": [
+        "invalid_amount"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H08",
+      "expected": [
+        "invalid_amount"
+      ],
+      "observed": [
+        "invalid_amount"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H09",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H10",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H11",
+      "expected": [
+        "missing_order",
+        "over_limit"
+      ],
+      "observed": [
+        "missing_order",
+        "over_limit"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H12",
+      "expected": [
+        "missing_invoice",
+        "invalid_amount"
+      ],
+      "observed": [
+        "missing_invoice",
+        "invalid_amount"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H13",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H14",
+      "expected": [
+        "duplicate_invoice"
+      ],
+      "observed": [
+        "duplicate_invoice"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H15",
+      "expected": [
+        "missing_order"
+      ],
+      "observed": [
+        "missing_order"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H16",
+      "expected": [
+        "invalid_amount"
+      ],
+      "observed": [
+        "invalid_amount"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H17",
+      "expected": [
+        "invalid_amount"
+      ],
+      "observed": [
+        "invalid_amount"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H18",
+      "expected": [
+        "over_limit"
+      ],
+      "observed": [
+        "over_limit"
+      ],
+      "match": true
+    },
+    {
+      "payment_id": "H19",
+      "expected": [],
+      "observed": [],
+      "match": true
+    },
+    {
+      "payment_id": "H20",
+      "expected": [
+        "duplicate_invoice"
+      ],
+      "observed": [
+        "duplicate_invoice"
+      ],
+      "match": true
+    }
+  ]
+}
